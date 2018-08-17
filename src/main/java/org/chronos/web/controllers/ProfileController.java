@@ -4,15 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class IndexController 
+public class ProfileController 
 {
-	@RequestMapping("/")
-	String home() {
-		return "index";
+	@RequestMapping("/userProfile")
+	public String userProfile()
+	{
+		return "userProfile";
 	}
-	
-	@RequestMapping("/blogPost")
-	String blogPost() {
-		return "blogPost";
-	}
+
 }

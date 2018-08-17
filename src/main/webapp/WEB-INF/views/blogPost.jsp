@@ -1,32 +1,29 @@
 <!DOCTYPE html>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html lang="en">
+
   <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    
-    <title>Blog Post</title>
 
-    <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
+    <title>Blog Post - Start Bootstrap Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="${contextRoot}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <!--  <link href="${contextRoot}/css/navbar-static-top.css" rel="stylesheet"> -->
-    
-    <!-- Custom styles for this template -->
-    <link href="${contextRoot}/css/blog-post.css" rel="stylesheet"> 
+    <link href="css/blog-post.css" rel="stylesheet">
+
   </head>
-  <body style="font-family: helvetica;">
-        <!-- Navigation -->
-    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Social Network</a>
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,20 +35,20 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="${contextRoot}/userProfile"><b>Profile</b></a>
+              <a class="nav-link" href="#">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="${contextRoot}/about"><b>About</b></a>
+              <a class="nav-link" href="#">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="${contextRoot}/addStatus"><b>Status</b></a>
+              <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    
-   	 <!-- Page Content -->
+
+    <!-- Page Content -->
     <div class="container">
 
       <div class="row">
@@ -216,18 +213,20 @@
 
     </div>
     <!-- /.container -->
-    
+
     <!-- Footer -->
-    <footer class="panel-footer navbar-inverse navbar-fixed-bottom" role="contentinfo" style="background-color: black; height: 80px; padding: 20px;">
+    <footer class="py-5 bg-dark">
       <div class="container">
         <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
       </div>
       <!-- /.container -->
     </footer>
-    
+
     <!-- Bootstrap core JavaScript -->
-    <script src="${contextRoot}/js/jquery.min.js"></script>
-    <script src="${contextRoot}/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
   </body>
+
 </html>
 
