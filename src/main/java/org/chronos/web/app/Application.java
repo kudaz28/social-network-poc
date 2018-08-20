@@ -1,5 +1,6 @@
 package org.chronos.web.app;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -9,7 +10,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"org.chronos.web.*"})
+@ComponentScan(basePackages = {"org.chronos.web.model" , "org.chronos.web.controllers.*" , "org.chronos.web.controllers", "org.chronos.web.repository"})
 @EnableConfigurationProperties
 @EntityScan(basePackages = {"org.chronos.web.model"})  // scan JPA entities
 public class Application extends SpringBootServletInitializer{
