@@ -41,7 +41,7 @@
               <a class="nav-link js-scroll-trigger" href="${contextRoot}/userProfile">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="${contextRoot}/contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" href="${contextRoot}/contact"><b>Contact</b></a>
             </li>
           </ul>
         </div>
@@ -97,7 +97,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
       </div>
       <!-- /.container -->
     </footer>

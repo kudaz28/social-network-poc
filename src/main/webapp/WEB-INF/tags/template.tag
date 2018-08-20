@@ -1,5 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ tag description="Template Site Tag" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags"%>
+<%@attribute name="title" fragment="true"%>
+<%@attribute name="logo" fragment="true"%>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,8 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>Scrolling Nav - Start Bootstrap Template</title>
+    
+    <title>
+         <jsp:invoke fragment="title" />
+         | Social Network
+    </title>
     
     <c:set var="contextRoot" value="${pageContext.request.contextPath}" />
 
@@ -93,6 +101,12 @@
         </div>
       </div>
     </section>
+    
+    <div class="container">
+         <div class="container">
+            <jsp:doBody />
+         </div>
+      </div>
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
