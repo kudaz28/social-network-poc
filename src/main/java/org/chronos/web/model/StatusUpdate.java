@@ -13,72 +13,79 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name = "status_update")
+@Table(name = "STATUS_UPDATE")
 public class StatusUpdate {
 
 	@Id
-	@Column(name = "id")
+	@Column(name = "STATUS_ID")
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long id;
+	private Long statusId;
 
-	@Column(name = "text")
-	private String text;
+	@Column(name = "STATUS_TEXT")
+	private String statusText;
 
-	@Column(name = "added")
+	@Column(name = "DATE_ADDED")
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date added;
+	private Date dateAdded;
 
 	@PrePersist
-	protected void onCreate() {
-		if (added == null) {
-			added = new Date();
+	protected void onCreate() 
+	{
+		if (dateAdded == null) {
+			dateAdded = new Date();
 		}
 	}
 	
-	public StatusUpdate() {
-		
+	public StatusUpdate() 
+	{
+		super();
 	}
 
-	public StatusUpdate(String text) {
-		this.text = text;
+	public StatusUpdate(String statusText) {
+		this.statusText = statusText;
 	}
 
-	public StatusUpdate(String text, Date added) {
-		this.text = text;
-		this.added = added;
+	public StatusUpdate(String statusText, Date added) {
+		this.statusText = statusText;
+		this.dateAdded = added;
 	}
 
-	public Long getId() {
-		return id;
+	public Long getStatusId() {
+		return statusId;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setStatusId(Long statusId) {
+		this.statusId = statusId;
 	}
 
-	public String getText() {
-		return text;
+	public String getStatusText() {
+		return statusText;
 	}
 
-	public void setText(String text) {
-		this.text = text;
+	public void setStatusText(String statusText) {
+		this.statusText = statusText;
 	}
 
-	public Date getAdded() {
-		return added;
+	public Date getDateAdded() {
+		return dateAdded;
 	}
 
-	public void setAdded(Date added) {
-		this.added = added;
+	public void setDateAdded(Date dateAdded) {
+		this.dateAdded = dateAdded;
+	}
+
+	@Override
+	public String toString() {
+		return "StatusUpdate [statusId=" + statusId + ", statusText=" + statusText + ", dateAdded=" + dateAdded + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((added == null) ? 0 : added.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((text == null) ? 0 : text.hashCode());
+		result = prime * result + ((dateAdded == null) ? 0 : dateAdded.hashCode());
+		result = prime * result + ((statusId == null) ? 0 : statusId.hashCode());
+		result = prime * result + ((statusText == null) ? 0 : statusText.hashCode());
 		return result;
 	}
 
@@ -91,29 +98,21 @@ public class StatusUpdate {
 		if (getClass() != obj.getClass())
 			return false;
 		StatusUpdate other = (StatusUpdate) obj;
-		if (added == null) {
-			if (other.added != null)
+		if (dateAdded == null) {
+			if (other.dateAdded != null)
 				return false;
-		} else if (!added.equals(other.added))
+		} else if (!dateAdded.equals(other.dateAdded))
 			return false;
-		if (id == null) {
-			if (other.id != null)
+		if (statusId == null) {
+			if (other.statusId != null)
 				return false;
-		} else if (!id.equals(other.id))
+		} else if (!statusId.equals(other.statusId))
 			return false;
-		if (text == null) {
-			if (other.text != null)
+		if (statusText == null) {
+			if (other.statusText != null)
 				return false;
-		} else if (!text.equals(other.text))
+		} else if (!statusText.equals(other.statusText))
 			return false;
 		return true;
 	}
-
-	@Override
-	public String toString() {
-		return "StatusUpdate [id=" + id + ", text=" + text + ", added=" + added + "]";
-	}
-	
-	
-
 }
