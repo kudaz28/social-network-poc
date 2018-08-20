@@ -10,9 +10,4 @@ public class IndexController
 	String home() {
 		return "index";
 	}
-	
-	@RequestMapping("/blogPost")
-	String blogPost() {
-		return "blogPost";
-	}
 }
