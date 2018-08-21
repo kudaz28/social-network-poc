@@ -1,7 +1,7 @@
-package org.chronos.web.services;
+package org.chronos.web.app.services;
 
-import org.chronos.web.model.StatusUpdate;
-import org.chronos.web.repository.StatusUpdateRepository;
+import org.chronos.web.app.model.StatusUpdate;
+import org.chronos.web.app.repository.StatusUpdateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
