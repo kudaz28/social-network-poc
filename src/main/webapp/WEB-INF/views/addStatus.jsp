@@ -27,6 +27,7 @@
 
           <hr>
 
+		  <p>${statusUpdate}</p>
           <!-- Date/Time -->
           <p>Posted on January 1, 2018 at 12:00 PM</p>
 
@@ -40,7 +41,7 @@
                 <div class="form-group">
                   <textarea class="form-control" rows="3"></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Add </button>
               </form>
             </div>
           </div>

@@ -10,8 +10,6 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"org.chronos.web.model" , "org.chronos.web.controllers.*" , "org.chronos.web.controllers", "org.chronos.web.repository"})
-@EnableConfigurationProperties
 @EntityScan(basePackages = {"org.chronos.web.model"})  // scan JPA entities
 public class Application extends SpringBootServletInitializer{
 	public static void main(String[] args) {
